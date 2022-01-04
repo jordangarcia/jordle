@@ -14496,7 +14496,7 @@
           var o = za();
           var newSol = Aa[Math.floor(Math.random() * Aa.length)];
           return (
-            !o.solution
+            !o.solution || o.gameStatus === "WIN" || o.gameStatus === "FAIL"
               ? ((e.boardState = new Array(6).fill("")),
                 (e.evaluations = new Array(6).fill(null)),
                 (e.solution = newSol),
